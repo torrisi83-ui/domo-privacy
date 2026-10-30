@@ -34,26 +34,43 @@
 <ul>
 <li>le carte (titolo, mittente, riassunto, importo, scadenza, codici pagoPA) in un file dell'app;</li>
 <li>le foto e i PDF che scansioni o importi, in una cartella dell'app;</li>
-<li>le impostazioni, compresa la chiave del servizio AI che scegli di inserire.</li>
+<li>le impostazioni e un codice anonimo dell'installazione, creato a caso al primo uso (vedi sotto).</li>
 </ul>
 <p>Gli altri programmi non possono leggere questi dati. Se disinstalli Domo, vengono cancellati, a meno che tu non abbia fatto un backup. Il backup è un file zip che crei tu e che conservi dove vuoi: Domo non lo invia a nessuno.</p>
 
-<h2>Cosa viene inviato ai servizi AI</h2>
-<p>Per spiegarti una carta, Domo la manda a un servizio di intelligenza artificiale. È l'unico caso in cui il contenuto delle tue carte lascia il telefono.</p>
-<p>Il servizio lo scegli tu nelle Impostazioni: Claude (Anthropic) oppure DeepSeek. Domo usa la chiave API che inserisci tu, quindi il rapporto con il servizio scelto è tra te e quel servizio, e valgono le sue condizioni e la sua informativa privacy. Entrambi i servizi trattano i dati fuori dall'Italia: DeepSeek ha sede in Cina, Anthropic negli Stati Uniti.</p>
+<h2>Cosa viene inviato per leggere le carte</h2>
+<p>Per spiegarti una carta, Domo la manda al server di Domo, che la passa all'intelligenza artificiale Claude di Anthropic e ti restituisce la risposta. È l'unico caso in cui il contenuto delle tue carte lascia il telefono, e succede solo quando chiedi tu di leggere una carta o fai una domanda.</p>
 <p>Vengono inviati:</p>
 <ul>
-<li>le immagini o il testo della carta che vuoi far leggere;</li>
-<li>le tue domande e le carte necessarie per rispondere, quando usi "Chiedi a Domo";</li>
-<li>la lingua scelta per la risposta.</li>
+<li>le immagini della carta che vuoi far leggere;</li>
+<li>le tue domande e i dati delle carte necessari per rispondere (titoli, importi, date), quando usi "Chiedi a Domo";</li>
+<li>la lingua scelta per la risposta;</li>
+<li>il codice anonimo dell'installazione e la versione dell'app.</li>
 </ul>
 <p>Una carta può contenere dati personali: nome, indirizzo, codice fiscale, importi, a volte dati sulla salute (per esempio una lettera INPS). Se non vuoi che una carta venga inviata, non chiedere a Domo di leggerla: resta archiviabile e utile come promemoria, ma devi compilarla a mano.</p>
 <p>L'AI può sbagliare. Controlla sempre importo e scadenza sul documento originale prima di pagare. Se trovi un errore, usa "Segnala un errore dell'AI".</p>
 
+<h2>Il server di Domo</h2>
+<p>Il server di Domo funziona su Cloudflare. Fa da tramite: riceve la carta o la domanda, la invia a Claude e ti restituisce la risposta. <strong>Non conserva le foto, i testi delle carte né le risposte.</strong></p>
+<p>Per offrire un numero di letture gratuite ogni mese e impedire gli abusi, il server conserva solo:</p>
+<ul>
+<li>il codice anonimo dell'installazione, con il numero di letture e di domande del mese in corso. Il codice è creato a caso dall'app, non contiene il tuo nome né dati del telefono, e il conteggio si azzera ogni mese;</li>
+<li>un'impronta cifrata dell'indirizzo IP (non l'indirizzo in chiaro), con il numero di richieste del giorno, cancellata il giorno dopo.</li>
+</ul>
+<p>Cloudflare registra inoltre per pochi giorni dati tecnici delle richieste (per esempio data, ora, esito e indirizzo IP), che servono a far funzionare il servizio e a individuare i guasti.</p>
+<p>La base giuridica è l'esecuzione del servizio che chiedi (leggere la carta o rispondere alla domanda) e, per i limiti contro gli abusi, il legittimo interesse a mantenere il servizio disponibile per tutti.</p>
+
+<h2>Chi tratta i dati per conto di Domo</h2>
+<ul>
+<li><strong>Anthropic</strong> (Stati Uniti), che fornisce l'intelligenza artificiale Claude. Anthropic tratta i dati per conto di Domo secondo i propri termini commerciali e il relativo accordo sul trattamento dei dati, e non usa i dati inviati tramite le sue API commerciali per addestrare i propri modelli. Informativa: <a href="https://www.anthropic.com/legal/privacy">anthropic.com/legal/privacy</a>.</li>
+<li><strong>Cloudflare</strong> (Stati Uniti), che ospita il server di Domo. Informativa: <a href="https://www.cloudflare.com/privacypolicy/">cloudflare.com/privacypolicy</a>.</li>
+</ul>
+<p>Questi fornitori trattano i dati anche fuori dall'Unione Europea, con le garanzie previste dal GDPR, come le clausole contrattuali standard approvate dalla Commissione europea.</p>
+
 <h2>Permessi richiesti</h2>
 <p>Domo chiede solo i permessi che servono a una funzione precisa.</p>
 <ul>
-<li><strong>Internet</strong>: per inviare le carte al servizio AI che hai scelto e per aprire il sito pagoPA quando scegli "Paga con pagoPA".</li>
+<li><strong>Internet</strong>: per inviare le carte al server di Domo quando chiedi di leggerle e per aprire il sito pagoPA quando scegli "Paga con pagoPA".</li>
 <li><strong>Notifiche</strong>: per i promemoria sulle scadenze.</li>
 <li><strong>Calendario (lettura e scrittura)</strong>: solo se attivi la sincronizzazione. Domo crea eventi di un giorno intero con titolo e descrizione della carta. Gli eventi stanno nel calendario che scegli tu: se quel calendario è sincronizzato con un account (per esempio Google), l'evento segue le regole di quell'account.</li>
 </ul>
@@ -69,7 +86,7 @@
 <p>Domo non contiene pubblicità, non usa servizi di statistica e non vende né cede i tuoi dati.</p>
 
 <h2>I tuoi diritti e la conservazione dei dati</h2>
-<p>I tuoi dati restano sul telefono finché non li cancelli tu. Puoi eliminare una singola carta con "Elimina questa carta" oppure cancellare tutto disinstallando Domo. I dati già inviati a Claude o a DeepSeek restano soggetti alle regole di quel servizio: per cancellarli, rivolgiti direttamente a lui.</p>
+<p>I tuoi dati restano sul telefono finché non li cancelli tu. Puoi eliminare una singola carta con "Elimina questa carta" oppure cancellare tutto disinstallando Domo. Il server di Domo non conserva le carte inviate. Il conteggio delle letture si azzera ogni mese e l'impronta dell'indirizzo IP ogni giorno.</p>
 <p>Ai sensi del GDPR hai diritto di accedere ai tuoi dati, correggerli, cancellarli, portarli con te (il backup zip serve anche a questo), limitarne il trattamento e opporti. Per esercitarli, o per chiedere chiarimenti, scrivi a <a href="mailto:domo.assistenza@gmail.com">domo.assistenza@gmail.com</a>. Puoi anche presentare reclamo al Garante per la protezione dei dati personali (<a href="https://www.garanteprivacy.it">garanteprivacy.it</a>).</p>
 <p>Domo non è pensata per i minori. Se aggiorneremo questa informativa, la nuova versione sarà pubblicata allo stesso indirizzo, con la data dell'ultima modifica.</p>
 
