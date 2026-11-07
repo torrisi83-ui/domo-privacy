@@ -39,7 +39,8 @@
 <li>the photos and PDFs you scan or import, in an app folder;</li>
 <li>your settings and an anonymous installation code, created at random on first use (see below);</li>
 <li>what Egida learns from your corrections ("What I've learned"): for example that a supplier's bills belong to a certain person, how often they arrive or whether they are paid by direct debit. You can see it and erase it at any time from Settings;</li>
-<li>the "Household numbers" that Egida finds in your documents (POD, PDR, customer code, contract or policy number, number plate, the supplier's customer service number or PEC address) and the savings you confirm in the savings counter, with the day you mark a document as paid.</li>
+<li>the "Household numbers" that Egida finds in your documents (POD, PDR, customer code, contract or policy number, number plate, the supplier's customer service number or PEC address) and the savings you confirm in the savings counter, with the day you mark a document as paid;</li>
+<li>the readings of your electricity, gas, water and LPG meters ("Your meters"): the number, the day and the name you give the meter. Usage, estimated cost, comparison with estimated bills and the water leak check are calculated on your phone.</li>
 </ul>
 <p>Other apps cannot read this data. If you uninstall Egida, it is deleted, unless you have a backup.</p>
 <p>For "Are you paying too much?", Egida reads the consumption and the energy price from your electricity or gas bill and compares them on your phone with the reference prices it downloads from the Egida server (the regulated "servizi di tutela" prices published by ARERA, the Italian energy regulator). No data from your bills is sent to download them.</p>
@@ -51,14 +52,15 @@
 <p>There are two kinds of backup, and Egida never receives either of them:</p>
 <ul>
 <li><strong>Your phone's Google backup.</strong> If you have turned it on in Android settings, the system saves Egida's documents and settings (not the photos) to your Google account, and restores them when you install Egida on a new phone. Android does this, not Egida: the data goes to your own Google storage, which handles it under Google's rules, and Egida has no copy of it. You can turn it off in Android settings, or exclude Egida from the backup.</li>
-<li><strong>Egida's backup copy.</strong> This is a zip file with your documents and photos that you create from Settings and keep wherever you like: Egida does not send it to anyone.</li>
+<li><strong>Egida's backup copy.</strong> This is a zip file with your documents, photos and meter readings that you create from Settings and keep wherever you like: Egida does not send it to anyone.</li>
 </ul>
 
 <h2>What is sent to read your documents</h2>
-<p>To explain a document, Egida sends it to the Egida server, which passes it to Anthropic's Claude artificial intelligence and returns the answer to you. This is the only case in which Egida sends the content of your documents to anyone, and it happens only when you ask it to read a document, ask a question or ask it to write a letter. (The Google backup described above is done by the Android system to your account, not by Egida.)</p>
+<p>To explain a document, Egida sends it to the Egida server, which passes it to Anthropic's Claude artificial intelligence and returns the answer to you. This is the only case in which Egida sends the content of your documents to anyone, and it happens only when you ask it to read a document or a meter, ask a question or ask it to write a letter. (The Google backup described above is done by the Android system to your account, not by Egida.)</p>
 <p>What is sent:</p>
 <ul>
 <li>the images of the document you want read;</li>
+<li>the photo of a meter, when you ask Egida to read it: only the number stays on your phone, and the photo is deleted right afterwards;</li>
 <li>your questions and the document details needed to answer them (titles, amounts, dates), when you use "Ask Egida";</li>
 <li>the details of a document (title, sender, amounts, dates, codes and the notes you write, never the photos), when you use "Reply for me" to have a letter written;</li>
 <li>the language chosen for the answer and the language of the app;</li>
@@ -89,7 +91,7 @@
 <p>Egida only asks for the permissions needed for a specific feature.</p>
 <ul>
 <li><strong>Internet</strong>: to send documents to the Egida server when you ask for them to be read, and to open the pagoPA website when you choose "Pay with pagoPA".</li>
-<li><strong>Notifications</strong>: for reminders about due dates and about cancelling contracts that renew automatically, for the reminder one month before a warranty ends, and for the Sunday and monthly summaries (which you can turn off in Settings). Reminders are prepared on your phone, without internet.</li>
+<li><strong>Notifications</strong>: for reminders about due dates and about cancelling contracts that renew automatically, for the reminder one month before a warranty ends, for the Sunday and monthly summaries (which you can turn off in Settings) and, if you turn it on, for the monthly reminder to read a meter. Reminders are prepared on your phone, without internet.</li>
 <li><strong>Calendar (read and write)</strong>: only if you turn on syncing. Egida creates all-day events with the document's title and description. The events go into the calendar you choose: if that calendar is synced with an account (for example Google), the event follows that account's rules.</li>
 </ul>
 <p>Egida does not ask for permission to use the camera or microphone. Document scanning is done by Google's scanner (ML Kit), which uses the camera on your behalf. Dictation in "Ask Egida" is handled by your phone's speech recognition, and "Read it to me" uses your phone's text-to-speech. Egida does not record or keep any audio.</p>

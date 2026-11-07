@@ -39,7 +39,8 @@
 <li>le foto e i PDF che scansioni o importi, in una cartella dell'app;</li>
 <li>le impostazioni e un codice anonimo dell'installazione, creato a caso al primo uso (vedi sotto);</li>
 <li>quello che Egida impara dalle tue correzioni ("Cosa ho imparato"): per esempio che le bollette di un fornitore sono di una certa persona, ogni quanto arrivano o se si pagano con l'addebito in banca. Lo vedi e lo cancelli quando vuoi dalle Impostazioni.</li>
-<li>i "Numeri di casa" che Egida ricava dalle tue carte (POD, PDR, codice cliente, numero di contratto o di polizza, targa, numero dell'assistenza o PEC del fornitore) e i risparmi che confermi tu nel contatore dei risparmi, con il giorno in cui segni pagata una carta.</li>
+<li>i "Numeri di casa" che Egida ricava dalle tue carte (POD, PDR, codice cliente, numero di contratto o di polizza, targa, numero dell'assistenza o PEC del fornitore) e i risparmi che confermi tu nel contatore dei risparmi, con il giorno in cui segni pagata una carta;</li>
+<li>le letture dei tuoi contatori di luce, gas, acqua e GPL ("I tuoi contatori"): il numero, il giorno e il nome che dai al contatore. Consumi, costo stimato, confronto con le bollette stimate e controllo delle perdite d'acqua sono calcolati sul telefono.</li>
 </ul>
 <p>Gli altri programmi non possono leggere questi dati. Se disinstalli Egida, vengono cancellati, a meno che tu non abbia un backup.</p>
 <p>Per "Stai pagando troppo?" Egida legge dalla bolletta di luce o gas il consumo e il prezzo dell'energia, e li confronta sul telefono con i prezzi di riferimento che scarica dal server di Egida (i prezzi dei servizi di tutela pubblicati da ARERA). Per scaricarli non invia nessun dato delle tue bollette.</p>
@@ -51,14 +52,15 @@
 <p>Ci sono due tipi di backup, e Egida non li riceve mai:</p>
 <ul>
 <li><strong>Il backup di Google del tuo telefono.</strong> Se lo hai attivato nelle impostazioni di Android, il sistema salva le carte e le impostazioni di Egida (le foto no) nel tuo account Google, e le rimette a posto quando installi Egida su un nuovo telefono. Lo fa Android, non Egida: i dati vanno nel tuo spazio su Google, che li tratta secondo le sue regole, e Egida non ne ha alcuna copia. Puoi disattivarlo dalle impostazioni di Android, o escludere Egida dal backup.</li>
-<li><strong>La copia di sicurezza di Egida.</strong> È un file zip con carte e foto che crei tu dalle Impostazioni e conservi dove vuoi: Egida non lo invia a nessuno.</li>
+<li><strong>La copia di sicurezza di Egida.</strong> È un file zip con carte, foto e letture dei contatori che crei tu dalle Impostazioni e conservi dove vuoi: Egida non lo invia a nessuno.</li>
 </ul>
 
 <h2>Cosa viene inviato per leggere le carte</h2>
-<p>Per spiegarti una carta, Egida la manda al server di Egida, che la passa all'intelligenza artificiale Claude di Anthropic e ti restituisce la risposta. È l'unico caso in cui Egida invia il contenuto delle tue carte a qualcuno, e succede solo quando chiedi tu di leggere una carta, fai una domanda o chiedi di scrivere una lettera. (Il backup di Google descritto sopra lo fa il sistema Android verso il tuo account, non Egida.)</p>
+<p>Per spiegarti una carta, Egida la manda al server di Egida, che la passa all'intelligenza artificiale Claude di Anthropic e ti restituisce la risposta. È l'unico caso in cui Egida invia il contenuto delle tue carte a qualcuno, e succede solo quando chiedi tu di leggere una carta o un contatore, fai una domanda o chiedi di scrivere una lettera. (Il backup di Google descritto sopra lo fa il sistema Android verso il tuo account, non Egida.)</p>
 <p>Vengono inviati:</p>
 <ul>
 <li>le immagini della carta che vuoi far leggere;</li>
+<li>la foto del contatore, quando chiedi a Egida di leggerla: sul telefono resta solo il numero letto, la foto si cancella subito dopo;</li>
 <li>le tue domande e i dati delle carte necessari per rispondere (titoli, importi, date), quando usi "Chiedi a Egida";</li>
 <li>i dati di una carta (titolo, mittente, importi, date, codici e le note che scrivi tu, mai le foto), quando usi "Rispondi per me" per farti scrivere una lettera;</li>
 <li>la lingua scelta per la risposta e la lingua dell'app;</li>
@@ -89,7 +91,7 @@
 <p>Egida chiede solo i permessi che servono a una funzione precisa.</p>
 <ul>
 <li><strong>Internet</strong>: per inviare le carte al server di Egida quando chiedi di leggerle e per aprire il sito pagoPA quando scegli "Paga con pagoPA".</li>
-<li><strong>Notifiche</strong>: per i promemoria sulle scadenze e sulle disdette dei contratti che si rinnovano da soli, per l'avviso un mese prima che finisca una garanzia, e per il riepilogo della domenica e quello del mese (che puoi spegnere nelle Impostazioni). Gli avvisi sono preparati sul telefono, senza internet.</li>
+<li><strong>Notifiche</strong>: per i promemoria sulle scadenze e sulle disdette dei contratti che si rinnovano da soli, per l'avviso un mese prima che finisca una garanzia, per il riepilogo della domenica e quello del mese (che puoi spegnere nelle Impostazioni) e, se lo accendi, per il promemoria mensile di leggere un contatore. Gli avvisi sono preparati sul telefono, senza internet.</li>
 <li><strong>Calendario (lettura e scrittura)</strong>: solo se attivi la sincronizzazione. Egida crea eventi di un giorno intero con titolo e descrizione della carta. Gli eventi stanno nel calendario che scegli tu: se quel calendario è sincronizzato con un account (per esempio Google), l'evento segue le regole di quell'account.</li>
 </ul>
 <p>Egida non chiede il permesso di usare fotocamera e microfono. La scansione dei documenti è fatta dallo scanner di Google (ML Kit), che usa la fotocamera per conto tuo. Il dettato di "Chiedi a Egida" è gestito dal riconoscimento vocale del tuo telefono, e Leggimela usa la sintesi vocale del telefono. Egida non registra né conserva l'audio.</p>
