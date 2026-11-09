@@ -26,7 +26,7 @@
 <main>
 <p class="lingua"><a href="../" hreflang="it" lang="it">Italiano</a> · English</p>
 <h1>Egida – Privacy policy</h1>
-<p class="data">Last updated: 8 November 2026. This is a translation of the <a href="../">Italian policy</a>; if the two differ, the Italian version prevails.</p>
+<p class="data">Last updated: 9 November 2026. This is a translation of the <a href="../">Italian policy</a>; if the two differ, the Italian version prevails.</p>
 
 <h2>Who we are</h2>
 <p>Egida is an Android app that helps you understand and keep track of your household paperwork (bills, fines, letters, pagoPA notices). The data controller is Giuseppe Torrisi. For any privacy request, write to <a href="mailto:domo.assistenza@gmail.com">domo.assistenza@gmail.com</a>.</p>
@@ -43,6 +43,7 @@
 <li>the readings of your electricity, gas, water and LPG meters ("Your meters"): the number, the day and the name you give the meter. Usage, estimated cost, comparison with estimated bills and the water leak check are calculated on your phone.</li>
 <li>the letters you mark as sent ("Sent letters"): the day, how you sent them, the text and the outcome. Reply deadlines, compensation and the next step are calculated on your phone.</li>
 <li>your answers in "Money you're entitled to" (ISEE value, how many people and children, whether someone is over 65 or 75, renting, whether there is a recognised disability in the family) and the benefits you mark as "Have it". The benefits are worked out on your phone: these answers are never sent to anyone.</li>
+<li>the items in your "To-do list" that you type or dictate (the text, the day if any, whether it's shopping, the linked document and when you tick it off). The day, group and linked document are worked out on your phone; dictation uses your phone's speech recognition. Ticked items are deleted automatically after 30 days.</li>
 </ul>
 <p>Other apps cannot read this data. If you uninstall Egida, it is deleted, unless you have a backup.</p>
 <p>For "Are you paying too much?", Egida reads the consumption and the energy price from your electricity or gas bill and compares them on your phone with the reference prices it downloads from the Egida server (the regulated "servizi di tutela" prices published by ARERA, the Italian energy regulator). No data from your bills is sent to download them.</p>
@@ -54,15 +55,16 @@
 <p>There are two kinds of backup, and Egida never receives either of them:</p>
 <ul>
 <li><strong>Your phone's Google backup.</strong> If you have turned it on in Android settings, the system saves Egida's documents and settings (not the photos) to your Google account, and restores them when you install Egida on a new phone. Android does this, not Egida: the data goes to your own Google storage, which handles it under Google's rules, and Egida has no copy of it. You can turn it off in Android settings, or exclude Egida from the backup.</li>
-<li><strong>Egida's backup copy.</strong> This is a zip file with your documents, photos and meter readings that you create from Settings and keep wherever you like: Egida does not send it to anyone.</li>
+<li><strong>Egida's backup copy.</strong> This is a zip file with your documents, photos, meter readings and to-do list that you create from Settings and keep wherever you like: Egida does not send it to anyone.</li>
 </ul>
 
 <h2>What is sent to read your documents</h2>
-<p>To explain a document, Egida sends it to the Egida server, which passes it to Anthropic's Claude artificial intelligence and returns the answer to you. This is the only case in which Egida sends the content of your documents to anyone, and it happens only when you ask it to read a document or a meter, ask a question or ask it to write a letter. (The Google backup described above is done by the Android system to your account, not by Egida.)</p>
+<p>To explain a document, Egida sends it to the Egida server, which passes it to Anthropic's Claude artificial intelligence and returns the answer to you. This is the only case in which Egida sends the content of your documents to anyone, and it happens only when you ask it to read a document, a meter or the photo of a list, ask a question or ask it to write a letter. (The Google backup described above is done by the Android system to your account, not by Egida.)</p>
 <p>What is sent:</p>
 <ul>
 <li>the images of the document you want read;</li>
 <li>the photo of a meter, when you ask Egida to read it: only the number stays on your phone, and the photo is deleted right afterwards;</li>
+<li>the photo of a list (whiteboard, note, post-it), when you ask Egida to add its lines to your "To-do list": only the lines you choose stay on your phone, and the photo is deleted right afterwards;</li>
 <li>your questions and the document details needed to answer them (titles, amounts, dates), when you use "Ask Egida";</li>
 <li>the details of a document (title, sender, amounts, dates, codes and the notes you write, never the photos), when you use "Reply for me" to have a letter written; for a reminder letter, also the date and an extract of the first letter;</li>
 <li>the language chosen for the answer and the language of the app;</li>
@@ -94,7 +96,7 @@
 <p>Egida only asks for the permissions needed for a specific feature.</p>
 <ul>
 <li><strong>Internet</strong>: to send documents to the Egida server when you ask for them to be read, and to open the pagoPA website when you choose "Pay with pagoPA".</li>
-<li><strong>Notifications</strong>: for reminders about due dates and about cancelling contracts that renew automatically, for the reminder one month before a warranty ends, for the notice when a sent letter gets no reply within the deadline, for the Sunday and monthly summaries (which you can turn off in Settings) and, if you turn it on, for the monthly reminder to read a meter. Reminders are prepared on your phone, without internet.</li>
+<li><strong>Notifications</strong>: for reminders about due dates and about cancelling contracts that renew automatically, for the reminder one month before a warranty ends, for the notice when a sent letter gets no reply within the deadline, for the morning of the day of a to-do item with a date, for the Sunday and monthly summaries (which you can turn off in Settings) and, if you turn it on, for the monthly reminder to read a meter. Reminders are prepared on your phone, without internet.</li>
 <li><strong>Calendar (read and write)</strong>: only if you turn on syncing. Egida creates all-day events with the document's title and description. The events go into the calendar you choose: if that calendar is synced with an account (for example Google), the event follows that account's rules.</li>
 </ul>
 <p>Egida does not ask for permission to use the camera or microphone. Document scanning is done by Google's scanner (ML Kit), which uses the camera on your behalf. Dictation in "Ask Egida" is handled by your phone's speech recognition, and "Read it to me" uses your phone's text-to-speech. Egida does not record or keep any audio.</p>
